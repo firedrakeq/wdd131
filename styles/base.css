@@ -1,0 +1,123 @@
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #2563eb;
+    --text-dark: #111827;
+    --text-light: #ffffff;
+    --bg-light: #f3f4f6;
+    --bg-card: #ffffff;
+    --accent-color: #ea580c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #111827;
+    padding: 0.8rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+/* Safe Hover Effect: Prevents layout shifts exceeding 3px */
+nav a:hover {
+    color: #93c5fd;
+    border-bottom: 2px solid #93c5fd;
+}
+
+nav a.active {
+    color: #fdba74;
+    border-bottom: 2px solid #fdba74;
+}
+
+main {
+    max-width: 950px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    flex: 1;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 1.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-top: 6px solid var(--primary-color);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card li {
+    margin-bottom: 0.75rem;
+}
+
+.location-info {
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #e5e7eb;
+    font-style: italic;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.highlight {
+    color: #fef08a;
+    font-weight: bold;
+}
