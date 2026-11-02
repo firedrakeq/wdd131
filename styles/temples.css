@@ -1,0 +1,138 @@
+/* --- Base Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f9fa;
+    color: #333;
+}
+
+h1, h2, figcaption {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* --- Header & Layout Container --- */
+header {
+    background-color: #002c54;
+    color: #fff;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* --- Responsive Navigation Menu (CSS Flex) --- */
+#menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+nav {
+    display: none; /* Hidden by default on mobile devices */
+    background-color: #003b73;
+}
+
+/* When active, show menu using JavaScript class toggle */
+nav.open {
+    display: block;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Vertical stack on phone viewports */
+}
+
+#nav-links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover & Active Feedback States */
+#nav-links a:hover, 
+#nav-links a.active {
+    background-color: #004b93;
+    color: #ffd700;
+}
+
+/* --- Main Structure & Grid --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #002c54;
+}
+
+/* CSS Grid implementation configured for a 1-column mobile standard layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* --- Responsive Figure Elements --- */
+figure {
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+figure:hover {
+    transform: translateY(-3px);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 3; /* Keeps uniform sizing proportions */
+}
+
+figcaption {
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: 500;
+    background-color: #fff;
+    border-top: 1px solid #e1e8ed;
+}
+
+/* --- Footer Standard Design --- */
+footer {
+    background-color: #002c54;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 4px solid #ffd700;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
