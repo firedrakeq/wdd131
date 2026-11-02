@@ -1,30 +1,7 @@
-/* --- Large Breakpoint Display Overrides --- */
-
 @media (min-width: 768px) {
-    /* Hide the hamburger button toggle completely on wide layouts */
-    #menu-button {
-        display: none;
-    }
-
-    /* Ensure navigation layout remains visible without dependencies */
-    nav {
-        display: block !important;
-        background-color: #002c54;
-    }
-
-    #nav-links {
-        flex-direction: row; /* Horizontal spread across header grid space */
-        justify-content: flex-end;
-        padding-right: 1rem;
-    }
-
-    #nav-links a {
-        padding: 1rem 1.5rem;
-    }
-
-    /* Multi-column grid interface using minmax scaling patterns */
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
+    #menu-button { display: none; }
+    header nav { display: block; background-color: #002c54; }
+    #nav-links { flex-direction: row; justify-content: flex-end; padding-right: 1rem; }
+    #nav-links a { padding: 1rem 1.5rem; }
+    .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 }
