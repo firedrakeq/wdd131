@@ -30,7 +30,6 @@ header {
     padding: 1rem;
 }
 
-/* --- Responsive Navigation Menu (CSS Flex) --- */
 #menu-button {
     font-size: 2rem;
     background: none;
@@ -41,11 +40,10 @@ header {
 }
 
 nav {
-    display: none; /* Hidden by default on mobile devices */
+    display: none;
     background-color: #003b73;
 }
 
-/* When active, show menu using JavaScript class toggle */
 nav.open {
     display: block;
 }
@@ -53,7 +51,7 @@ nav.open {
 #nav-links {
     list-style: none;
     display: flex;
-    flex-direction: column; /* Vertical stack on phone viewports */
+    flex-direction: column;
 }
 
 #nav-links a {
@@ -65,14 +63,13 @@ nav.open {
     transition: background-color 0.3s ease;
 }
 
-/* Hover & Active Feedback States */
 #nav-links a:hover, 
 #nav-links a.active {
     background-color: #004b93;
     color: #ffd700;
 }
 
-/* --- Main Structure & Grid --- */
+/* --- Main Layout Grid --- */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -85,14 +82,13 @@ main h2 {
     color: #002c54;
 }
 
-/* CSS Grid implementation configured for a 1-column mobile standard layout */
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-/* --- Responsive Figure Elements --- */
+/* --- Gallery Item Layouts --- */
 figure {
     background-color: #fff;
     border: 1px solid #e1e8ed;
@@ -111,7 +107,7 @@ figure img {
     height: auto;
     display: block;
     object-fit: cover;
-    aspect-ratio: 4 / 3; /* Keeps uniform sizing proportions */
+    aspect-ratio: 4 / 3;
 }
 
 figcaption {
@@ -122,7 +118,7 @@ figcaption {
     border-top: 1px solid #e1e8ed;
 }
 
-/* --- Footer Standard Design --- */
+/* --- Footer Elements --- */
 footer {
     background-color: #002c54;
     color: #fff;
