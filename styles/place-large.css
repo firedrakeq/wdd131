@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+    main {
+        position: relative;
+    }
+
+    .hero {
+        border-bottom: none;
+    }
+
+    .hero img {
+        max-height: 750px;
+    }
+
+    .card {
+        position: absolute;
+        background-color: var(--card-surface);
+        width: 320px;
+        padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+        border-bottom: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .data-card {
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather-card {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .card h2 {
+        background-color: var(--primary-green);
+        color: var(--text-light);
+        text-align: left;
+        padding: 0.5rem 1.25rem;
+        margin-left: -2.25rem;
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+
+    /* Hide SVG icon in wider view */
+    .weather-icon {
+        display: none;
+    }
+
+    /* Pseudo-element emoticon in wider view only */
+    .weather-card h2::after {
+        content: " ⛅";
+        margin-left: 0.4rem;
+    }
+}
