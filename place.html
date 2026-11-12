@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page - Nigeria</title>
+    <meta name="description" content="Explore Nigeria's key geographical data, demographics, and current weather conditions including wind chill calculations.">
+    <meta name="author" content="Quentin Chime">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <img src="images/hero-small.webp" alt="Scenic landscape view of Nigeria" width="500" height="600">
+            </picture>
+        </div>
+
+        <section class="card data-card">
+            <h2>Data</h2>
+            <div class="info-grid">
+                <span class="label">Area:</span>
+                <span class="value">923,768 sq km</span>
+
+                <span class="label">Population:</span>
+                <span class="value">223,800,000</span>
+
+                <span class="label">Capital:</span>
+                <span class="value">Abuja</span>
+
+                <span class="label">Languages:</span>
+                <span class="value">English, Hausa, Igbo, Yoruba</span>
+
+                <span class="label">Currency:</span>
+                <span class="value">Nigerian Naira (NGN)</span>
+
+                <span class="label">Time Zone:</span>
+                <span class="value">UTC+1 (WAT)</span>
+
+                <span class="label">Calling Code:</span>
+                <span class="value">+234</span>
+
+                <span class="label">Internet TLD:</span>
+                <span class="value">.ng</span>
+            </div>
+        </section>
+
+        <section class="card weather-card">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-icon" width="64" height="64">
+            <div class="info-grid">
+                <span class="label">Temperature:</span>
+                <span class="value">10 °C</span>
+
+                <span class="label">Conditions:</span>
+                <span class="value">Partly Cloudy</span>
+
+                <span class="label">Wind:</span>
+                <span class="value">5 km/h</span>
+
+                <span class="label">Wind Chill:</span>
+                <span class="value" id="windchill"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> ❖ Quentin Chime ❖ Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
 
